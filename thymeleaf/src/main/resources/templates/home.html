@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" media="screen" th:href="@{/css/normalize.min.css}"/>
+    <link rel="stylesheet" media="screen" th:href="@{/css/application.css}"/>
+  </head>
+  <body>
+    <div th:replace="~{fragments/header :: header}">Header</div>
+    <main>
+        <h3>olá.</h3>
+    </main>
+    <div th:replace="~{fragments/footer :: footer}">Footer</div>
+  </body>
+</html>
