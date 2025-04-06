@@ -21,10 +21,7 @@ public class GlobalViewAttributes {
     public String timeStamp() {
         return appInfo.getBuildDate();
     }
-    @ModelAttribute("appArtifactId")
-    public String artifactId() {
-        return appInfo.getArtifactId();
-    }
+
     @ModelAttribute("appApplicationName")
     public String applicationName() {
         return appInfo.getApplicationName();

@@ -1,8 +1,10 @@
 package br.com.cpdias.sb3.config;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.info.BuildProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
@@ -11,35 +13,39 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 
 @Component
+@PropertySource("classpath:application.properties")
 public class AppInfo {
 
+    @Value("${app.version}")
     private String version;
+
+    @Value("${app.timestamp}")
     private String buildDate;
-    private String artifactId;
+
+    @Value("${app.name}")
     private String applicationName;
 
-    public AppInfo(BuildProperties buildProperties) {
-        this.version = buildProperties.getVersion();
-        LocalDateTime constructionTime = buildProperties.getTime().atZone(ZoneId.systemDefault()).toLocalDateTime();
-        this.buildDate = constructionTime.toString();
-        this.artifactId = buildProperties.getArtifact();
-        this.applicationName  = buildProperties.getName();
-
-    }
     public String getVersion() {
         return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
     }
 
     public String getBuildDate() {
         return buildDate;
     }
 
-    public String getArtifactId() {
-        return artifactId;
+    public void setBuildDate(String buildDate) {
+        this.buildDate = buildDate;
     }
 
     public String getApplicationName() {
         return applicationName;
     }
 
+    public void setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+    }
 }
