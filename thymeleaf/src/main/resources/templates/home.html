@@ -8,5 +8,14 @@
     </main>
     <div th:replace="~{fragments/footer :: footer}">Footer</div>
     <p>@app.name@</p>
+
+    <div class="container">
+        <div class="content-header">
+            <h1 th:text="#{greeting}">Welcome</h1>
+            <p th:text="#{welcome.message}">Welcome message</p>
+        </div>
+    </div>
+    <p>Build: <span th:text="${appBuildDate}"></span></p>
+
   </body>
 </html>
