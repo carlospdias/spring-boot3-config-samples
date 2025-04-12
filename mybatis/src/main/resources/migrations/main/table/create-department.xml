@@ -1,0 +1,11 @@
+<changeSet  id="1"  author="bob">  
+    <createTable  tableName="department">  
+        <column  name="id"  type="int">  
+            <constraints  primaryKey="true"  nullable="false"/>  
+        </column>  
+        <column  name="name"  type="varchar(50)">  
+            <constraints  nullable="false"/>  
+        </column>  
+        <column  name="active"  type="boolean"  defaultValueBoolean="true"/>  
+    </createTable>
+</changeSet>
