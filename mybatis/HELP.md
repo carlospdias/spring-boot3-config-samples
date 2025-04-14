@@ -6,6 +6,7 @@ For further reference, please consider the following sections:
 
 
 https://docs.liquibase.com/concepts/changelogs/changeset.html
+https://medium.com/@bishalf98/log4j2-in-springboot3-095ab6f15763
 
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
